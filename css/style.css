@@ -10,3 +10,8 @@
 .donut {
   float: right;
 }
+
+.page-content-answer {
+  padding: 15px;
+  font-size: 40px;
+}
