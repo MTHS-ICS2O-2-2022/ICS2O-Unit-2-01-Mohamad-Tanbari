@@ -1,5 +1,15 @@
 import os
 
+# Print welcome message
+print("0;33mWelcome to the website setup program! - Mohamad0;33m")
+
+# Ask user if they want to create a new website
+create = input("\033[92mDo you want to create a new website? (y/n) \033[0m")
+if input(create) == "n":  # If the user doesn't want to create a new website
+    exit()  # Exit the program
+if input(create) == "y":  # If the user wants to create a new website
+    print("\033[92mLoading... \033[0m")
+
 # Code to paste into index.html, style.css, and script.js
 html_content = """
 <!DOCTYPE html>
@@ -106,7 +116,7 @@ css_content = """/* Created by: Mohamad
 }
 """
 
-js_content = """// Copyright (c) 2020 Mr. Coxall All rights reserved
+js_content = """// Copyright (c) 2023 Mohamad All rights reserved
 //
 // Created by: Mohamad
 // Created on: Sep 2023
@@ -116,73 +126,70 @@ function buttonClicked() {
 """
 
 # Path to index.html
-index_html_path = os.path.join(os.getcwd(), 'index.html')
+index_html_path = os.path.join(os.getcwd(), "index.html")
 
 # Path to style.css
-style_css_path = os.path.join(os.getcwd(), 'css', 'style.css')
+style_css_path = os.path.join(os.getcwd(), "css", "style.css")
 
 # Path to script.js
-script_js_path = os.path.join(os.getcwd(), 'js', 'script.js')
+script_js_path = os.path.join(os.getcwd(), "js", "script.js")
 
 # Delete contents of index.html
-with open(index_html_path, 'w') as f:
-    f.write('')
+with open(index_html_path, "w") as f:
+    f.write("")
 
 # Delete contents of style.css
-with open(style_css_path, 'w') as f:
-    f.write('')
+with open(style_css_path, "w") as f:
+    f.write("")
 
 # Delete contents of script.js
-with open(script_js_path, 'w') as f:
-    f.write('')
+with open(script_js_path, "w") as f:
+    f.write("")
 
 # Add HTML to index.html
-with open(index_html_path, 'a') as f:
+with open(index_html_path, "a") as f:
     f.write(html_content)
 
 # Add CSS to style.css
-with open(style_css_path, 'a') as f:
+with open(style_css_path, "a") as f:
     f.write(css_content)
 
 # Add JavaScript to script.js
-with open(script_js_path, 'a') as f:
+with open(script_js_path, "a") as f:
     f.write(js_content)
 
-# Print 'Done' in green
-print('\033[92mDone\033[0m')
+# Print "Done" in green
+print("\033[92mDone\033[0m")
 
 # Ask for website title
-title = input(
-    "\033[92mWhat do you want the title of the website to be? \033[92m")
+title = input("\033[92mWhat do you want the title of the website to be? \033[92m")
 
-# Replace '{$websiteTitle}' with user's input in index.html
-with open(index_html_path, 'r') as f:
+# Replace "{$websiteTitle}" with user"s input in index.html
+with open(index_html_path, "r") as f:
     html = f.read()
-html = html.replace('{$websiteTitle}', title)
-with open(index_html_path, 'w') as f:
+html = html.replace("{$websiteTitle}", title)
+with open(index_html_path, "w") as f:
     f.write(html)
 
 # Ask for website description
-title = input(
-    "\033[92mWhat do you want the description of the website to be? \033[92m")
+title = input("\033[92mWhat do you want the description of the website to be? \033[92m")
 
-# Replace '{$websiteDescription}' with user's input in index.html
-with open(index_html_path, 'r') as f:
+# Replace "{$websiteDescription}" with user"s input in index.html
+with open(index_html_path, "r") as f:
     html = f.read()
-html = html.replace('{$websiteDescription}', title)
-with open(index_html_path, 'w') as f:
+html = html.replace("{$websiteDescription}", title)
+with open(index_html_path, "w") as f:
     f.write(html)
 
 # Ask for website heading
-title = input(
-    "\033[92mWhat do you want the header of the website to be? \033[92m")
+title = input("\033[92mWhat do you want the header of the website to be? \033[92m")
 
-# Replace '{$websiteHeader}' with user's input in index.html
-with open(index_html_path, 'r') as f:
+# Replace "{$websiteHeader}" with user"s input in index.html
+with open(index_html_path, "r") as f:
     html = f.read()
-html = html.replace('{$websiteHeader}', title)
-with open(index_html_path, 'w') as f:
+html = html.replace("{$websiteHeader}", title)
+with open(index_html_path, "w") as f:
     f.write(html)
 
-# Print 'Done' in green
-print('\033[92mDone\033[0m')
+# Print "Done" in green
+print("\033[92mDone\033[0m")
