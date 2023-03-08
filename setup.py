@@ -1,4 +1,5 @@
 import os
+import sys
 
 # Print welcome message
 print("0;33mWelcome to the website setup program! - Mohamad0;33m")
@@ -6,7 +7,7 @@ print("0;33mWelcome to the website setup program! - Mohamad0;33m")
 # Ask user if they want to create a new website
 create = input("\033[92mDo you want to create a new website? (y/n) \033[0m")
 if input(create) == "n":  # If the user doesn't want to create a new website
-    exit()  # Exit the program
+    sys.exit()  # Exit the program
 if input(create) == "y":  # If the user wants to create a new website
     print("\033[92mLoading... \033[0m")
 
